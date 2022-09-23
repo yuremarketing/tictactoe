@@ -50,15 +50,19 @@ public class Board {
 		}
 		return true;
 	}
-	public boolean play(Player player, Move move) {
+	public boolean play(Player player, Move move) throws InvalidMoveException {
 		int i = move.getI();
 		int j = move.getJ();
 		
-		//TODO validar os movimentos do player
+		if ( i < 0 || j < 0 || i >= Constants.BOARD_SIZE || j >= Constants.BOARD_SIZE){
+			throw new InvalidMoveException("O intervalo da jogada é inválido ");
+		}
 		
-		matrix[i][j] = player.getSymbol();
+		if (matrix[i][j] != ' ') {
+			throw new InvalidMoveException("Essa jogada ja foi realizada");
+		}
 		
-		
+		matrix[i][j] = player.getSymbol();			
 		return checkRows(player) || checkCols(player) || checkDiagonal1(player) 
 				|| checkDiagonal2(player);
 	}

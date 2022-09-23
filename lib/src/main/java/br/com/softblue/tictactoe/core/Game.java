@@ -10,7 +10,6 @@ public class Game {
 	private Board board = new Board();
 	private Player[] players = new Player[Constants.SYMBOL_PLAYERS.length];
 	private int currentPLayerIndex = -1;
-
 	
 	public void play() {
 		
@@ -23,8 +22,7 @@ public class Game {
 		boolean gameEnded = false;
 		Player currentPlayer = nextPlayer();
 		Player winner = null;
-		
-		
+				
 		while (!gameEnded) {
 			board.print();
 			boolean sequenceFound;
