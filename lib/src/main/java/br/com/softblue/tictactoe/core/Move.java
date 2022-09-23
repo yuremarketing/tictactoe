@@ -5,13 +5,17 @@ public class Move {
 	private int i;
 	private int j;
 	
-	public Move(String moveStr) {
-		String[] tokens = moveStr.split(",");
+	public Move(String moveStr) throws InvalidMoveException{
 		
-		this.i = Integer.parseInt(tokens[0]);
-		this.j = Integer.parseInt(tokens[1]);
+		try {
+			String[] tokens = moveStr.split(",");
+			
+			this.i = Integer.parseInt(tokens[0]);
+			this.j = Integer.parseInt(tokens[1]);
+		} catch (Exception e) {
+			throw new InvalidMoveException(" A jogada é invalida");
+		}
 		
-		//TODO Validar se a estrutura do moveStr está correta
 		
 	}
 	
