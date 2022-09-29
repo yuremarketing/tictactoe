@@ -13,6 +13,7 @@ import br.com.softblue.tictactoe.core.Player;
 public class Game {
 	
 	private Board board = new Board();
+	//array de jogadores pasando para Player a qtd de jogadores
 	private Player[] players = new Player[Constants.SYMBOL_PLAYERS.length];
 	private int currentPLayerIndex = -1;
 	private ScoreManager scoreManager;

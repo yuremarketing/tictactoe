@@ -4,16 +4,16 @@ import br.com.softblue.tictactoe.Constants;
 import br.com.softblue.tictactoe.ui.UI;
 
 public class Board {
-	
-	private char [][] matrix ;
+	//definido tamanho do tabuleiro, passando as constantes BOARD
+	private char [][] matrix = new char [Constants.BOARD_SIZE][Constants.BOARD_SIZE];
 	
 	/*
 	 * 
 	 * */
-	public Board() {
-		matrix = new char[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
-		clear();
-	}
+//	public Board() {
+//		matrix = new char[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
+//		clear();
+//	}
 
 	/*
 	 * M

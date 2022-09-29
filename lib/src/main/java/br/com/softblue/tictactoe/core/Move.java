@@ -1,5 +1,8 @@
 package br.com.softblue.tictactoe.core;
 
+/*
+ * Armazena a cordenada de uma  jogada na MATRIX, ou seja no tabuleiro
+ * */
 public class Move {
 	
 	private int i;

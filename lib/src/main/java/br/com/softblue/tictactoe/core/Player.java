@@ -2,6 +2,9 @@ package br.com.softblue.tictactoe.core;
 
 import br.com.softblue.tictactoe.ui.UI;
 
+/*
+ * Criao os jogadores e suas respectivas ações no jogo
+ * */
 public class Player {
 
 
@@ -10,6 +13,7 @@ public class Player {
 	private Board board;
 	private char symbol;
 	
+	Player[] players = new Player[2];
 	
 	
 	
@@ -19,7 +23,10 @@ public class Player {
 		this.board = board;
 		this.symbol = symbol;
 	}
-
+	/*
+	 * retorna o movimento da jogada, ou seja, 
+	 * qual potno do tabuleiro será marcado a jogada 
+	 * */
 	private Move inputMove() throws InvalidMoveException {
 		String moveStr = UI.readInput("Jogador'"+name +"'=>");
 		return new Move(moveStr);		
