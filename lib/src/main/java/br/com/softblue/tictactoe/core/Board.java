@@ -8,7 +8,7 @@ public class Board {
 	private char [][] matrix = new char [Constants.BOARD_SIZE][Constants.BOARD_SIZE];
 	
 	/*
-	 * 
+	 * anotações
 	 * */
 //	public Board() {
 //		matrix = new char[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
